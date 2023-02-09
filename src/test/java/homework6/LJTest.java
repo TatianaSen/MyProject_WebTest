@@ -1,5 +1,8 @@
 package homework6;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
+import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.*;
 public class LJTest extends BaseTest {
 
@@ -35,11 +38,14 @@ public class LJTest extends BaseTest {
     }
 
     @Test
+    @Feature("Статистика")
+//    @Issue("123")
+//    @TmsLink("123")
     void statMyguestsTest(){
         mainPage.clickSignInButton()
                 .login("TatianaSenichka", "Z/x.c,vmbn2022")
                 .navigationBlock.hoverProfileMenuAndClickStat()
-                .statTabs();
+                .guestsTab();
         Assertions.assertTrue(driver.getCurrentUrl().contains("guests"));
     }
 

@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +19,7 @@ public class LogInPage extends BaseView {
 
     @FindBy(name = "action:login")
     private WebElement submitButton;
-
+    @Step("Логин")
     public AuthorisedMainPage login(String login, String password){
         emailField.sendKeys(login);
         passwordField.sendKeys(password);

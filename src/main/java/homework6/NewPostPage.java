@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +18,7 @@ public class NewPostPage extends BaseView{
 
     @FindBy(xpath = "//footer/div/button/span")
     private WebElement confirmPublishButton;
-
+    @Step("Новый пост")
     public NewPostPage newPost(String text){
         enterTextField.sendKeys(text);
         manageAndPublishButton.click();

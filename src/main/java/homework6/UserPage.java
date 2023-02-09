@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,7 +20,7 @@ public class UserPage extends BaseView{
 
     @FindBy(xpath = "//article[@class='entryunit entryunit--air entryunit--view-recent js-emojis ng-scope']")
     private List<WebElement> postsList;
-
+    @Step("Открыть пост")
     public OpenedPostPage openPost(String id){
         postsList.stream().filter(p -> p.getText().contains(id)).findFirst().get().click();
         return new OpenedPostPage(driver);

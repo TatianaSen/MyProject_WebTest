@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +33,7 @@ public class OpenedPostPage extends BaseView{
     private WebElement confirmDeleteButton;
 
 
-
+    @Step("Редактировать пост")
     public void editPost(String addtext){
         webDriverWait.until(ExpectedConditions.visibilityOf(postMenuButton));
         postMenuButton.click();
@@ -41,7 +42,7 @@ public class OpenedPostPage extends BaseView{
         manageAndPublishButton.click();
         confirmPublishButton.click();
     }
-
+    @Step("Удалить пост")
     public void deletePost(){
         webDriverWait.until(ExpectedConditions.visibilityOf(postMenuButton));
         postMenuButton.click();

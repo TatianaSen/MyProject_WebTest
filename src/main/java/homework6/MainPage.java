@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,24 +15,28 @@ public class MainPage extends BaseView {
     @FindBy(css = ".s-do-item-search-btn .svgicon")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//div[@class='s-header-search__input-wrapper']")
+   // @FindBy(xpath = "//div[@class='s-header-search__input-wrapper']")
+    @FindBy(xpath = "//input[@id='SearchText']/ancestor::div[@class='s-header-search__input-wrapper']")
     private WebElement seachField;
-
 
     public MainPage(WebDriver driver) {
         super(driver);
     }
 
+
+    @Step("Клик на кнопку войти")
+
     public LogInPage clickSignInButton(){
         signInButton.click();
         return new LogInPage(driver);
     }
+    @Step("Клик на кнопку поиск")
 
     public void searchFromMain(String text) throws InterruptedException {
         searchButton.click();
         webDriverWait.until(ExpectedConditions.visibilityOf(seachField));
+        seachField.click();
         seachField.sendKeys(text, Keys.ENTER);
-        Thread.sleep(5000);
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
         }

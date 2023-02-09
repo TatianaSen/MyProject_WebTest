@@ -1,0 +1,1 @@
+https://vp.rambler.ru/player/sdk.js 1 Allow attribute will take precedence over 'allowfullscreen'.

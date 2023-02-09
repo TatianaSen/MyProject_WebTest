@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,7 @@ public class NavigationBlock extends BaseView {
 
     @FindBy(xpath = "//a[.='Статистика']")
     private WebElement statButton;
-
+    @Step("Навести курсор мыши на Имя пользователя и кликнуть на Статитстику")
     public StatisticsPage hoverProfileMenuAndClickStat(){
         webDriverWait.until(ExpectedConditions.visibilityOf(profileMenu));
         actions.moveToElement(profileMenu)
@@ -24,7 +25,7 @@ public class NavigationBlock extends BaseView {
        statButton.click();
         return new StatisticsPage(driver);
     }
-
+    @Step("Свежие посты")
     public UserPage freshPosts(){
         webDriverWait.until(ExpectedConditions.visibilityOf(profileMenu));
         profileMenu.click();

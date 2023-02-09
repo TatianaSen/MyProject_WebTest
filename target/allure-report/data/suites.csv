@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 09 14:28:27 MSK 2023","Thu Feb 09 14:29:43 MSK 2023","76408","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statCommentsTest","statCommentsTest()",""
+"passed","Thu Feb 09 14:30:04 MSK 2023","Thu Feb 09 14:30:56 MSK 2023","51832","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statReadersTest","statReadersTest()",""
+"passed","Thu Feb 09 14:31:26 MSK 2023","Thu Feb 09 14:32:08 MSK 2023","41949","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statLikesTest","statLikesTest()",""
+"passed","Thu Feb 09 14:33:22 MSK 2023","Thu Feb 09 14:33:59 MSK 2023","37383","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statCapitalTest","statCapitalTest()",""
+"passed","Thu Feb 09 14:25:07 MSK 2023","Thu Feb 09 14:25:53 MSK 2023","45523","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statMyguestsTest","statMyguestsTest()",""
+"passed","Thu Feb 09 14:26:15 MSK 2023","Thu Feb 09 14:27:59 MSK 2023","104499","","homework7.StatisticsTabTest","","homework7.StatisticsTabTest","statPostsTest","statPostsTest()",""

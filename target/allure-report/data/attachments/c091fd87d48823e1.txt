@@ -1,0 +1,1 @@
+https://gamd.hit.gemius.pl/xgemius.js 826 An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.

@@ -1,5 +1,6 @@
 package homework6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,7 @@ public class AuthorisedMainPage extends BaseView {
 
     @FindBy(css = ".s-header-item-post--long")
     private WebElement newPostButton;
-
+    @Step("Написать в блог")
     public NewPostPage toWright(){
         webDriverWait.until(ExpectedConditions.visibilityOf(newPostButton));
         newPostButton.click();
